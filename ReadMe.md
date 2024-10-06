@@ -1,5 +1,5 @@
 # Endpoints
-- ``/`` Hello World
+- ``/`` A basic hello world
 - ``/insert_data`` To insert data in the mongoDB and create a bucket
 - ``/get_data`` To gather the mongoDB data
 
