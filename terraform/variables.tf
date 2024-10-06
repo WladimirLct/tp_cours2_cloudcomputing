@@ -1,6 +1,6 @@
 variable "location" {
   type        = string
-  default     = "westeurope"
+  default     = "francecentral"
   description = "Location of the resource group."
 }
 
