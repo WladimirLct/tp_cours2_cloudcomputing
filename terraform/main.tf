@@ -4,15 +4,15 @@ resource "random_string" "random" {
     upper   = false
 }
 
-resource "azurerm_resource_group" "rg" {
+resource "azurerm_resource_group" "api" {
     location = var.location
     name     = "course-2-rg-${random_string.random.result}"
 }
 
 resource "azurerm_service_plan" "api" {
     name                = "webapp-service-plan"
-    resource_group_name = azurerm_resource_group.rg.name
-    location            = azurerm_resource_group.rg.location
+    resource_group_name = azurerm_resource_group.api.name
+    location            = azurerm_resource_group.api.location
     os_type             = "Linux"
     sku_name            = "B1"
 }
